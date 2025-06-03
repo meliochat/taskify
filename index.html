@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taskify</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1>Taskify ✨</h1>
+        <button id="theme-toggle">🌙</button>
+      </div>
+
+      <nav class="nav-tabs">
+        <button class="nav-btn active" data-tab="tasks">Tasks</button>
+        <button class="nav-btn" data-tab="pomodoro">Pomodoro</button>
+      </nav>
+
+      <!-- Sección de tareas -->
+      <section class="task-section tab-content active" id="tasks">
+        <h2>Task list 📝</h2>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Add new task..." autocomplete="off" />
+            <button type="submit" id="add-task-btn">Add</button>
+        </form>
+        <ul id="task-list"></ul>
+      </section>
+
+      <!-- Pomodoro -->
+      <section class="pomodoro-section tab-content" id="pomodoro">
+        <h2>Focus time 🧠</h2>
+        <div id="timer">25:00</div>
+
+        <div class="controls">
+          <button id="start-timer">Start</button>
+          <button id="reset-timer">Reset</button>
+        </div>
+
+        <div class="mode-selector">
+          <span>Mode:</span>
+          <button data-time="25">25/5</button>
+          <button data-time="50">50/10</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
